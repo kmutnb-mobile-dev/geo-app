@@ -1,0 +1,17 @@
+<ion-view title="Dashboard">
+  <ion-content class="padding">
+
+    <button class="button button-block button-outline button-positive">
+      {{getTime()}}
+    </button>
+
+
+    <ul class="list" ng-init="predicate = 'distance'">
+      <li class="item" ng-repeat="point in markPoints | orderBy:predicate">
+        <b>{{point.name}}</b>
+        <span class="badge badge-assertive">{{point.distance}}</span>
+      </li>
+    </ul>
+
+  </ion-content>
+</ion-view>
